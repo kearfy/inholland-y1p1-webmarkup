@@ -1,0 +1,4 @@
+Student name: Micha de Vries
+Student number: 681640
+Student class: inf1B
+URL student GitHub repository: https://github.com/kearfy/inholland-y1p1-webmarkup
