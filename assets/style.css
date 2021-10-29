@@ -14,6 +14,20 @@
     z-index: 200;
 }
 
+.navigation.grid-layout > header {
+    display: grid;
+    grid-template-areas: 'logo title';
+    grid-template-columns: [logo] 118px [title];
+}
+
+.navigation header .grid-logo {
+    grid-area: logo;
+}
+
+.navigation header .grid-title {
+    grid-area: title;
+}
+
 .navigation > header img {
     height: 100px;
     padding-bottom: 15px;
@@ -21,6 +35,11 @@
 
 .navigation > header aside {
     margin-left: 35px;
+}
+
+.navigation > header a {
+    color: black;
+    text-decoration: none;
 }
 
 .navigation > header h1 {
@@ -66,7 +85,7 @@ nav {
     z-index: 100;
 }
 
-nav::after {
+nav.add-shadow::after {
     content: ' ';
     position: absolute;
     bottom: -100px;
@@ -119,6 +138,14 @@ section.navigation > input[type=checkbox] {
 }
 
 @media (max-width: 480px) {
+    .navigation.grid-layout > header {
+        grid-template-areas: 'title title';
+    }
+
+    .navigation.grid-layout > header aside {
+        margin-top: 13px;
+    }
+
     nav {
         height: 0px;
         width: 80%;
@@ -176,7 +203,7 @@ section.home-content {
     flex-wrap: wrap;
 }
 
-section.promotional-movie {
+section.home-content section.promotional-movie {
     width: 100%;
     flex: 0 1 100%;
     height: calc(20vw + 15vh);
@@ -185,7 +212,7 @@ section.promotional-movie {
     z-index: 0;
 }
 
-section.promotional-movie video {
+section.home-content section.promotional-movie video {
     width: 100%;
     position: absolute;
     top: 0;
@@ -195,26 +222,26 @@ section.promotional-movie video {
 }
 
 @media (max-width: 1179px) {
-    section.promotional-movie {
+    section.home-content section.promotional-movie {
         order: 2;
         height: calc(20vw + 9vh);
     }
 }
 
 @media (max-width: 480px) {
-    section.promotional-movie {
+    section.home-content section.promotional-movie {
         display: none;
     }
 }
 
-section.articles {
+section.home-content section.articles {
     flex: 0 1 calc(85% - 350px);
     margin: 60px 0px 60px 5%;
     display: flex;
     flex-direction: column;
 }
 
-section.articles article {
+section.home-content section.articles article {
     width: calc(100% - 75px);
     min-height: calc(500px - 10vw);
     padding: 25px 35px;
@@ -233,35 +260,35 @@ section.articles article {
     box-shadow: 1px 2px 10px -5px rgba(0,0,0,0.75);
 }
 
-section.articles article:last-child {
+section.home-content section.articles article:last-child {
     margin-bottom: 0px;
 } 
 
-section.articles article .article-content {
+section.home-content section.articles article .article-content {
     width: 50%;
     margin-bottom: 10px;
     margin-left: 20px;
 }
 
-section.articles article .article-content header,
-section.articles article .article-content footer {
+section.home-content section.articles article .article-content header,
+section.home-content section.articles article .article-content footer {
     width: 100%;
 }
 
-section.articles article h3 {
+section.home-content section.articles article h3 {
     font-size: 35px;
 }
 
-section.articles article p {
+section.home-content section.articles article p {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-section.articles article a {
+section.home-content section.articles article a {
     font-size: 16px;
 }
 
-section.articles article .image-container {
+section.home-content section.articles article .image-container {
     position: relative;
     overflow: hidden;
     width: 40%;
@@ -274,7 +301,7 @@ section.articles article .image-container {
     align-items: center;
 }
 
-section.articles article .image-container::after {
+section.home-content section.articles article .image-container::after {
     width: 100%;
     height: 30%;
     position: absolute;
@@ -285,13 +312,13 @@ section.articles article .image-container::after {
     display: block;
 }
 
-section.articles article .image-container .image-copyright {
+section.home-content section.articles article .image-container .image-copyright {
     z-index: 20;
     padding: 10px 0px;
     color: white;
 }
 
-section.articles article img {
+section.home-content section.articles article img {
     position: absolute;
     top: 0;
     right: 0;
@@ -303,57 +330,57 @@ section.articles article img {
 }
 
 @media (max-width: 1179px) {
-    section.articles {
+    section.home-content section.articles {
         flex-direction: column-reverse;
         flex: 0 1 100%;
         order: 3;
         margin: 60px 5%;
     }
 
-    section.articles article {  
+    section.home-content section.articles article {  
         min-height: calc(400px - 15vw);
         flex-direction: row-reverse;
     }
 
-    section.articles article:first-child {
+    section.home-content section.articles article:first-child {
         margin-bottom: 0px;
     }
 
-    section.articles article:last-child {
+    section.home-content section.articles article:last-child {
         margin-bottom: 30px;
     }
 
-    section.articles article .article-content {
+    section.home-content section.articles article .article-content {
         margin-top: 0px;
         margin-bottom: 10px;
     }
 
-    section.articles article h3 {
+    section.home-content section.articles article h3 {
         font-size: 30px;
     }
 
-    section.articles article p {
+    section.home-content section.articles article p {
         font-size: calc(13px + .25vw);
         text-align: right;
     }
 
-    section.articles article a {
+    section.home-content section.articles article a {
         font-size: 13px;
     }
 
-    section.articles article .article-content header,
-    section.articles article .article-content footer {
+    section.home-content section.articles article .article-content header,
+    section.home-content section.articles article .article-content footer {
         display: flex;
         justify-content: flex-end;
     }
 
-    section.articles article .image-container {
+    section.home-content section.articles article .image-container {
         height: calc(400px - 15vw);
     }
 }
 
 @media (max-width: 480px) {
-    section.articles {
+    section.home-content section.articles {
         flex-direction: column-reverse;
         flex: 0 1 100%;
         order: 3;
@@ -361,7 +388,7 @@ section.articles article img {
         margin: 0px 0px;
     }
 
-    section.articles article {
+    section.home-content section.articles article {
         width: 80%;
         padding: 25px 10%;
         flex-direction: column;
@@ -373,44 +400,44 @@ section.articles article img {
         border-radius: 0px;
     }
 
-    section.articles article:nth-child(odd) {
+    section.home-content section.articles article:nth-child(odd) {
         background-color: white;
     } 
     
-    section.articles article .article-content {
+    section.home-content section.articles article .article-content {
         width: 100%;
         margin-top: 10px;
         margin-bottom: 40px;
         margin-left: 0px;
     }
 
-    section.articles article:first-child {
+    section.home-content section.articles article:first-child {
         margin-bottom: 30px;
     }
 
-    section.articles article:nth-child(2) {
+    section.home-content section.articles article:nth-child(2) {
         padding-bottom: 50px;
     }
 
-    section.articles article:last-child {
+    section.home-content section.articles article:last-child {
         margin-bottom: 30px;
     }
 
-    section.articles article h3 {
+    section.home-content section.articles article h3 {
         font-size: 25px;
     }
 
-    section.articles article p {
+    section.home-content section.articles article p {
         text-align: left;
     }
 
-    section.articles article .article-content header,
-    section.articles article .article-content footer {
+    section.home-content section.articles article .article-content header,
+    section.home-content section.articles article .article-content footer {
         display: flex;
         justify-content: flex-start;
     }
 
-    section.articles article .image-container {
+    section.home-content section.articles article .image-container {
         position: relative;
         overflow: hidden;
         width: 90%;
@@ -419,7 +446,7 @@ section.articles article img {
         margin: 0 auto;
     }
 
-    section.articles article img {
+    section.home-content section.articles article img {
         position: absolute;
         top: 0;
         right: 0;
@@ -431,7 +458,7 @@ section.articles article img {
     }
 }
 
-section.destinations {
+section.home-content section.destinations {
     flex: 0 1 250px;
     margin: 60px 5%;
     padding: 50px 50px;
@@ -439,27 +466,27 @@ section.destinations {
     border-radius: 10px;
 }
 
-section.destinations h3 {
+section.home-content section.destinations h3 {
     color: white;
     font-size: 25px;
 }
 
-section.destinations ol {
+section.home-content section.destinations ol {
     margin-top: 25px;
     margin-left: 20px;
 }
 
-section.destinations ol li {
+section.home-content section.destinations ol li {
     color: #eee;
     margin-bottom: 10px;
 }
 
-section.destinations ol li b {
+section.home-content section.destinations ol li b {
     margin-bottom: 5px;
 }
 
 @media (max-width: 1179px) {
-    section.destinations {
+    section.home-content section.destinations {
         flex: 0 1 100%;
         order: 1;
         margin: 0px;
@@ -470,7 +497,7 @@ section.destinations ol li b {
 }
 
 @media (max-width: 480px) {
-    section.destinations {
+    section.home-content section.destinations {
         width: 80%;
         padding: 40px 10%;
     }
