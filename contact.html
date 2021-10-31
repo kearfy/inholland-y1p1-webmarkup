@@ -1,16 +1,101 @@
-<header>
-    <section>
-        <h1>Title</h1>
-        <h2>Subtitel</h2>
-        <section>
-            
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style.css">
+        <title>Tui - Discover your smile</title>
+    </head>
+    <body>
+        <section class="navigation">
+            <header>
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Tui logo">
+                </a>
+                <aside>
+                    <h1>Tui</h1>
+                    <h2>Discover your smile</h2>
+                </aside>
+            </header>
+
+            <input type="checkbox" id="mobile-navigation-toggler">
+            <label for="mobile-navigation-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a href="bestdestinations.html">Best destinations</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="contact.html"><b>Contact</b></a></li>
+                </ul>
+            </nav>
         </section>
-    </section>
-    <nav>
-        <ul>
-            <li>
-            
-            </li>
-        </ul>
-    </nav>
-</header>
+
+        <section class="contact-page">
+            <article>
+                <h3>
+                    Contact
+                </h3>
+                <p>
+                    You can easily contact us via TUI.nl. Just fill out the form down below. You can also give us a call at +12-012345678 or send an E-mail to info@tui.nl.
+                </p>
+            </article>
+
+            <form>
+                <fieldset>
+                    <legend>Leave a message</legend>
+
+                    <label for="user-name">Name</label>
+                    <input type="text" id="user-name" name="name">
+
+                    <label for="user-email">E-mail</label>
+                    <input type="text" id="user-email" name="email">
+
+                    <label for="user-message">Message</label>
+                    <textarea name="message" id="user-message" cols="30" rows="10">
+
+                    </textarea>
+
+                    <button type="submit">
+                        Send
+                    </button>
+                </fieldset>
+            </form>
+
+            <aside>
+                <section class="product product-one">
+                    <a href="https://www.tui.nl/vliegtickets/services/zitcomfort/">
+                        <img src="assets/product-vip-seat.png" alt="">
+                    </a>
+                </section>
+                <section class="product product-two">
+                    <a href="https://www.tui.nl/vliegtickets/services/bagage/">
+                        <img src="assets/product-bagage.jpg" alt="">
+                    </a>
+                </section>
+                <section class="product product-three">
+                    <a href="https://www.tui.nl/vliegtickets/services/maaltijdreservering/">
+                        <img src="assets/product-maaltijd.jpg" alt="">
+                    </a>
+                </section>
+            </aside>
+        </section>
+
+        <footer>
+            <section class="copyright">
+                <p>
+                    &copy; 2021 Micha de Vries
+                </p>
+            </section>
+            <section class="cookie-statement">
+                <p>
+                    Cookie statement
+                </p>
+            </section>
+        </footer>
+    </body>
+</html>
