@@ -6,6 +6,14 @@
         font-family: 'Trebuchet MS', sans-serif;
     }
 
+    a:hover {
+        color: rgb(163, 163, 255);
+    }
+
+    a:active {
+        background-color: white;
+    }
+
 /* Default properties for the header */
 
     .navigation > header {
@@ -72,6 +80,8 @@
 
         .navigation > header h2 {
             font-size: 18px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
         }
     }
 
@@ -198,7 +208,9 @@
 
         section.navigation > label span {
             width: 30px;
-            border: 1px solid black;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
             display: block;
             margin: 7px 10px;
         }
@@ -298,6 +310,7 @@
     section.home-content section.articles article p {
         margin-top: 20px;
         margin-bottom: 10px;
+        text-indent: 4px;
     }
 
     section.home-content section.articles article a {
@@ -341,7 +354,7 @@
         bottom: 0;
         left: 0;
         margin: auto;
-        max-width: 100% !important;
+        max-width: 100%;
         border-radius: 5px;
     }
 
@@ -471,7 +484,7 @@
             bottom: 0;
             left: 0;
             margin: auto;
-            max-width: unset !important;
+            max-width: unset;
             width: 100%;
         }
     }
@@ -945,6 +958,7 @@
         background-color: #FFAA007F;
         height: 50px;
         line-height: 50px;
+        z-index: 9999;
     }
 
     body > footer section.cookie-statement p {
