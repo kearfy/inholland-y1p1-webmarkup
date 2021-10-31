@@ -6,6 +6,8 @@
         font-family: 'Trebuchet MS', sans-serif;
     }
 
+/* Global link styling */
+
     a:hover {
         color: rgb(163, 163, 255);
     }
